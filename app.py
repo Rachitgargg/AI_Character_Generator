@@ -125,7 +125,7 @@ with st.sidebar:
     # 3. Random Idea Generator
     st.markdown("---")
     st.markdown("#### 💡 Need Inspiration?")
-    st.button("🎲 Generate Random Idea", on_click=randomize_prompt, use_container_width=True)
+    st.button("🎲 Generate Random Idea", on_click=randomize_prompt, width="stretch")
     
     # 4. Project Information
     st.markdown("---")
@@ -161,7 +161,7 @@ with col_input:
     st.markdown("<br>", unsafe_allow_html=True)
     
     # Generate Button
-    generate_clicked = st.button("🚀 Generate Character concept art", use_container_width=True)
+    generate_clicked = st.button("🚀 Generate Character concept art", width="stretch")
     
     if generate_clicked:
         if not user_prompt.strip():
@@ -206,7 +206,7 @@ with col_display:
         st.image(
             st.session_state.current_image, 
             caption=f"Generated: {st.session_state.current_prompt[:60]}...", 
-            use_container_width=True
+            width="stretch"
         )
         
         # Download and Information Panel
@@ -222,7 +222,7 @@ with col_display:
                 data=st.session_state.current_image,
                 file_name=f"game_character_{st.session_state.current_style.lower()}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png",
                 mime="image/png",
-                use_container_width=True
+                width="stretch"
             )
     else:
         # Placeholder state before any generation
@@ -256,7 +256,7 @@ else:
         with st.expander(f"🕒 {item['timestamp']} - {item['style']} - {item['prompt'][:60]}..."):
             h_col1, h_col2 = st.columns([1, 2], gap="medium")
             with h_col1:
-                st.image(item["image_bytes"], use_container_width=True)
+                st.image(item["image_bytes"], width="stretch")
             with h_col2:
                 st.markdown(f"**Original prompt:** {item['prompt']}")
                 st.markdown(f"**Style:** `{item['style']}` | **Size:** `{item['size']}`")
