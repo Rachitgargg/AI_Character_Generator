@@ -30,4 +30,4 @@ RANDOM_CHARACTER_IDEAS = [
 
 # Model configuration
 DEFAULT_MODEL = "black-forest-labs/FLUX.1-schnell"
-API_URL = f"https://api-inference.huggingface.co/models/{DEFAULT_MODEL}"
+API_URL = f"https://router.huggingface.co/hf-inference/models/{DEFAULT_MODEL}"
