@@ -38,65 +38,6 @@ ai-game-character-creator/
     └── prompt_builder.py   # Style template formatter utility
 ```
 
----
-
-## 🚀 Installation & Local Setup
-
-### 1. Prerequisites
-- Python 3.11 installed.
-- A Hugging Face account and API token. Get yours at [Hugging Face Settings](https://huggingface.co/settings/tokens).
-
-### 2. Clone the Repository
-```bash
-git clone https://github.com/Rachitgargg/AI_Character_Generator.git
-cd AI_Character_Generator
-```
-
-### 3. Create a Virtual Environment
-```bash
-python -m venv venv
-source venv/bin/activate  # On macOS/Linux
-# venv\Scripts\activate   # On Windows
-```
-
-### 4. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 5. Setup Environment Variables
-Copy `.env.example` to `.env` and fill in your Hugging Face API key:
-```bash
-cp .env.example .env
-```
-Open `.env` and configure your key:
-```ini
-HF_API_KEY=your_huggingface_api_token_here
-```
-
----
-
-## 🏃 Running the Application
-
-Launch the Streamlit app locally:
-```bash
-streamlit run app.py
-```
-This will open the application in your default web browser (usually at `http://localhost:8501`).
-
----
-
-## 🌐 Deployment Instructions
-
-You can easily deploy this application to **Streamlit Community Cloud**:
-1. Push your code to your GitHub repository.
-2. Visit [share.streamlit.io](https://share.streamlit.io/) and log in with GitHub.
-3. Click **New app**, select the repository (`AI_Character_Generator`), branch (`main`), and main file path (`app.py`).
-4. Under **Advanced Settings**, add your environment variables under secrets:
-   ```toml
-   HF_API_KEY = "your_actual_token_here"
-   ```
-5. Click **Deploy!**
 
 ---
 
@@ -106,10 +47,3 @@ You can easily deploy this application to **Streamlit Community Cloud**:
 - **Cold Start Time**: The model may take 10-20 seconds to load upon the first request or after periods of inactivity.
 
 ---
-
-## 🔮 Future Improvements
-
-- Add support for other models like Stable Diffusion 3 or FLUX.1-dev.
-- Support negative prompts for more precise image output control.
-- Implement an image-to-image feature to iterate on existing characters.
-- Add character stats generators based on the generated art.
